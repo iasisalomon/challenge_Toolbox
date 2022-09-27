@@ -3,7 +3,7 @@ import axios from 'axios'
 
 export const fetchData = createAsyncThunk('data/fetchData', async () => {
   try {
-    const response = await axios.get('http://localhost:3000/files/data')
+    const response = await axios.get('http://localhost:4040/files/data')
     console.log('fired')
     console.log(response.data)
     return response.data
