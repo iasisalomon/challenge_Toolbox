@@ -28,8 +28,8 @@ describe('Files', () => {
     it('each element should have fields with content', async () => {
       const res = await chai.request(app).get('/files/data')
       fileDownload = res.body
-      fileDownload.forEach((dataDownload) => {
-        dataDownload.forEach((data) => {
+      fileDownload.forEach(dataDownload => {
+        dataDownload.forEach(data => {
           data.should.have.property('file')
           data.should.have.property('text')
           data.should.have.property('number')
@@ -45,9 +45,14 @@ describe('Files', () => {
     it('each element should be a valid file download', async () => {
       const res = await chai.request(app).get('/files/data')
       fileDownload = res.body
-      fileDownload.forEach((dataDownload) => {
-        dataDownload.forEach((data) => {
-          data.file.should.be.oneOf(['test2.csv', 'test3.csv', 'test6.csv', 'test9.csv'])
+      fileDownload.forEach(dataDownload => {
+        dataDownload.forEach(data => {
+          data.file.should.be.oneOf([
+            'test2.csv',
+            'test3.csv',
+            'test6.csv',
+            'test9.csv'
+          ])
         })
       })
       res.status.should.be.equal(200)
