@@ -1,5 +1,5 @@
 import React from 'react'
-import { Rows } from './features/rows/Rows'
+import { TableContainer } from './features/tableContainer/TableContainer'
 import { Header } from './features/header/Header'
 
 function App () {
@@ -9,7 +9,7 @@ function App () {
         <Header />
       </div>
       <div className='container'>
-        <Rows />
+        <TableContainer />
       </div>
     </div>
   )

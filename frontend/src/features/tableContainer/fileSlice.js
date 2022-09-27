@@ -1,9 +1,14 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit'
+import { endpoints } from '../../enums/apiEndpoints'
 import axios from 'axios'
 
 export const fetchData = createAsyncThunk('data/fetchData', async () => {
+  let url = null
+  endpoints.DOCKER_API_URL
+    ? (url = endpoints.DOCKER_API_URL)
+    : (url = endpoints.LOCAL_API_URL)
   try {
-    const response = await axios.get('http://localhost:4040/files/data')
+    const response = await axios.get(url)
     console.log('fired')
     console.log(response.data)
     return response.data
@@ -31,7 +36,7 @@ export const fileSlice = createSlice({
         state.status = 'succeeded'
         // Add any fetched posts to the array
         state.files = state.files.concat(action.payload)
-        console.log('this is the state');
+        console.log('this is the state')
         console.log(state.files)
       })
       .addCase(fetchData.rejected, (state, action) => {
