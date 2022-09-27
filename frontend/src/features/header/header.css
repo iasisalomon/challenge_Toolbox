@@ -1,0 +1,10 @@
+header .row {
+  background-color: orange;
+  border-color: black;
+  border-style: solid;
+  border-width: 1px;
+}
+
+header .row h1 {
+  color: white;
+}

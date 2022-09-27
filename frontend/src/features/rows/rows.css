@@ -1,0 +1,8 @@
+th {
+  font-weight: bold;
+}
+
+thead th {
+  border-bottom-style: solid;
+  border-bottom-color: black;
+}

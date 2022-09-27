@@ -1,9 +1,10 @@
 version: '3'
 services:
   api:
-    image: toolbox_api
-    build: .
-    ports:
-      - '3000:3000'
+    container_name: toolbox_api
+    build:
+      dockerfile: "Dockerfile"
     volumes:
-      - ./:/usr/src/app
+      - ./:/app
+    ports:
+      - '4040:3000'

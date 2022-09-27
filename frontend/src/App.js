@@ -1,12 +1,16 @@
 import React from 'react'
-import { Counter } from './features/counter/Counter'
+import { Rows } from './features/rows/Rows'
+import { Header } from './features/header/Header'
 
 function App () {
   return (
     <div className='App'>
-      <header className='App-header'>
-        <Counter />
-      </header>
+      <div className='container-fluid'>
+        <Header />
+      </div>
+      <div className='container'>
+        <Rows />
+      </div>
     </div>
   )
 }
