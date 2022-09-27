@@ -18,7 +18,7 @@ describe('Files', () => {
 			res.body.length.should.be.eql(7);
 		});
 	});
-	describe('/files/data', () =
+	describe('/files/data', () => {
 		let fileDownload;
 		it('should display more than one valid downloads', async () => {
 			const res = await chai.request(app).get('/files/data');
