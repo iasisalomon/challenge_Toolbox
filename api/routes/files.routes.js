@@ -4,6 +4,6 @@ const filesController = require('../controllers/filesController');
 
 /* GET users listing. */
 router.get('/', filesController.getFiles);
-// router.get('/download', filesController.downloadFile);
+router.get('/data', filesController.getAndTransformFiles);
 
 module.exports = router;
