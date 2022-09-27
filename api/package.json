@@ -6,7 +6,7 @@
     "start": "node ./bin/www",
     "dev": "nodemon ./bin/www",
     "test": "mocha --reporter spec",
-    "lint": "standard --fix"
+    "lint": "standard && standard --fix"
   },
   "dependencies": {
     "axios": "^0.27.2",
