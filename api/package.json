@@ -5,7 +5,8 @@
   "scripts": {
     "start": "node ./bin/www",
     "dev": "nodemon ./bin/www",
-    "test": "mocha --reporter spec"
+    "test": "mocha --reporter spec",
+    "lint": "standard --fix"
   },
   "dependencies": {
     "axios": "^0.27.2",
@@ -19,5 +20,13 @@
     "morgan": "~1.9.1",
     "nodemon": "^2.0.20",
     "papaparse": "^5.3.2"
+  },
+  "devDependencies": {
+    "standard": "^17.0.0"
+  },
+  "standard": {
+    "ignore": [
+      "*.test.js"
+    ]
   }
 }

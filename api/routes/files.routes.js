@@ -1,9 +1,10 @@
-var express = require('express');
-var router = express.Router();
-const filesController = require('../controllers/filesController');
+const express = require('express')
+const router = express.Router()
+const filesController = require('../controllers/filesController')
 
 /* GET users listing. */
-router.get('/', filesController.getFiles);
-router.get('/data', filesController.getAndTransformFiles);
+router.get('/', filesController.availableEndpoints)
+router.get('/list', filesController.getFiles)
+router.get('/data', filesController.getAndTransformFiles)
 
-module.exports = router;
+module.exports = router
