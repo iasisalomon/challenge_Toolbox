@@ -1,0 +1,5 @@
+._loading_overlay_wrapper {
+  position: absolute; /* or absolute */
+  top: 50%;
+  left: 50%;
+}
