@@ -25,8 +25,14 @@
 
 #### API
 1) Clone the repo
-2) npm run start (or npm run dev for development)
-3) npm run test (for testing)
-4) npm run lint (for Standard Js linting)
-5) cd /api
+2) cd api/
+3) npm run start (or npm run dev for development)
+4) npm run test (for testing)
+5) npm run lint (for Standard Js linting)
 6) docker compose up -d (for docker build)
+
+#### FROENTEND
+1) cd frontend/
+2) npm run start (or npm run dev for development)
+3) npm run build (for production build)
+4) docker compose up -d (for docker build)

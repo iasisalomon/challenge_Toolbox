@@ -7,7 +7,7 @@ module.exports = {
   availableEndpoints: async function (req, res, next) {
     res.send({
       availableEndpoints: {
-        '/files': 'GET all files',
+        '/files/list': 'GET all files',
         '/files/data': 'GET all valid files and save to CSV'
       }
     })
