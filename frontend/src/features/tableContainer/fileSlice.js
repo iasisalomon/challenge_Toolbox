@@ -9,8 +9,6 @@ export const fetchData = createAsyncThunk('data/fetchData', async () => {
     : (url = endpoints.LOCAL_API_URL)
   try {
     const response = await axios.get(url)
-    console.log('fired')
-    console.log(response.data)
     return response.data
   } catch (error) {
     return error.message
@@ -35,9 +33,12 @@ export const fileSlice = createSlice({
       .addCase(fetchData.fulfilled, (state, action) => {
         state.status = 'succeeded'
         // Add any fetched posts to the array
-        state.files = state.files.concat(action.payload)
-        console.log('this is the state')
-        console.log(state.files)
+        if (typeof action.payload === 'string') {
+          state.error = action.payload
+          state.status = 'failed'
+        } else {
+          state.files = state.files.concat(action.payload)
+        }
       })
       .addCase(fetchData.rejected, (state, action) => {
         state.status = 'failed'

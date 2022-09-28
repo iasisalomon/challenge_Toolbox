@@ -24,8 +24,14 @@ export function TableContainer () {
   if (status === 'failed') {
     return (
       <div>
-        <h1>Something went wrong</h1>
-        <p>{error}</p>
+        <div className='alert alert-danger mt-2' role='alert'>
+          <h4 className='alert-heading'>Something went wrong</h4>
+          <p>{error}</p>
+          <hr />
+          <p className='mb-0'>
+            Be sure to check everything is running correctly and try again
+          </p>
+        </div>
       </div>
     )
   }

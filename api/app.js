@@ -23,5 +23,11 @@ app.use(express.static(path.join(__dirname, 'public')))
 // routes
 app.use('/', indexRouter)
 app.use('/files', usersRouter)
+app.use(function (req, res, next) {
+  res.status(404).send({
+    code: 404,
+    message: 'Not found'
+  })
+})
 
 module.exports = app

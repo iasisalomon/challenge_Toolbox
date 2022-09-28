@@ -36,3 +36,7 @@
 2) npm run start (or npm run dev for development)
 3) npm run build (for production build)
 4) docker compose up -d (for docker build)
+
+### Possible errors
+1) If you get an error like this: Network Error
+   1) Frontend will use docker port by default, if you want to use localhost:3000, delete the DOCKER_API_URL from /src/enums/apiEndpoints.js
